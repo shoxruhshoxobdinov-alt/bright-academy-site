@@ -1,0 +1,394 @@
+
+/* =========================
+   1. UMUMIY SOZLAMALAR
+========================= */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172554;
+    background: #f8fafc;
+    line-height: 1.7;
+  }
+  
+  a {
+    transition: 0.25s ease;
+  }
+  
+  section {
+    scroll-margin-top: 75px;
+  }
+  
+  /* =========================
+     2. YUQORI MENYU
+  ========================= */
+  
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 8%;
+    background: #ffffff;
+    box-shadow: 0 3px 18px #0f172a0a;
+  }
+  
+  .logo {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  nav a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #2563eb;
+  }
+  
+  /* =========================
+     3. TUGMALAR
+  ========================= */
+  
+  .btn {
+    display: inline-block;
+    margin-top: 26px;
+    padding: 13px 25px;
+    border-radius: 9px;
+    background: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 7px 18px #2563eb30;
+  }
+  
+  .btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+  }
+  
+  /* =========================
+     4. BOSH SAHIFA
+  ========================= */
+  
+  .hero {
+    padding: 100px 8%;
+    text-align: center;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff, #e0e7ff);
+  }
+  
+  .tag,
+  .section-tag {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .hero h1 {
+    max-width: 780px;
+    margin: 20px auto;
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #475569;
+    font-size: 17px;
+  }
+  
+  /* =========================
+     5. KURSLAR BO‘LIMI
+  ========================= */
+  
+  .courses {
+    padding: 75px 8%;
+    text-align: center;
+  }
+  
+  .courses h2,
+  .benefits h2,
+  .contact h2 {
+    margin: 10px 0 14px;
+    font-size: 34px;
+    line-height: 1.3;
+  }
+  
+  .section-description {
+    margin: 0 auto 35px;
+    color: #64748b;
+  }
+  
+  .course-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .course {
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px #0f172a08;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .course:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px #0f172a12;
+  }
+  
+  .course-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: #eff6ff;
+    font-size: 25px;
+  }
+  
+  .course h3 {
+    margin: 0 0 12px;
+    color: #1d4ed8;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+  
+  .course p {
+    color: #64748b;
+  }
+  
+  .course ul {
+    padding-left: 22px;
+    color: #475569;
+  }
+  
+  .course li {
+    margin-bottom: 7px;
+  }
+  
+  .course-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .course-btn:hover {
+    background: #2563eb;
+    color: #ffffff;
+  }
+  
+  /* =========================
+     6. AFZALLIKLAR
+  ========================= */
+  
+  .benefits {
+    padding: 70px 8%;
+    background: #eff6ff;
+    text-align: center;
+  }
+  
+  .benefit-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1050px;
+    margin: 35px auto 0;
+  }
+  
+  .benefit {
+    padding: 25px 20px;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    background: #ffffff;
+  }
+  
+  .benefit span {
+    font-size: 30px;
+  }
+  
+  .benefit h3 {
+    margin-bottom: 8px;
+    font-size: 19px;
+  }
+  
+  .benefit p {
+    margin-bottom: 0;
+    color: #64748b;
+    font-size: 14px;
+  }
+  
+  /* =========================
+     7. BOG‘LANISH
+  ========================= */
+  
+  .contact {
+    padding: 75px 8%;
+    text-align: center;
+    background: #ffffff;
+  }
+  
+  .contact > p:not(.section-tag) {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #64748b;
+  }
+  
+  .contact-card {
+    max-width: 420px;
+    margin: 28px auto 0;
+    padding: 18px 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+  }
+  
+  .contact-card p {
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+  }
+  
+  /* =========================
+     8. PASTKI QISM
+  ========================= */
+  
+  footer {
+    padding: 22px 8%;
+    background: #172554;
+    color: #cbd5e1;
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  /* =========================
+     9. PLANShetlar
+  ========================= */
+  
+  @media (max-width: 800px) {
+    header {
+      padding: 16px 5%;
+    }
+  
+    nav {
+      gap: 12px;
+    }
+  
+    nav a {
+      font-size: 13px;
+    }
+  
+    .hero h1 {
+      font-size: 39px;
+    }
+  
+    .course-list {
+      gap: 16px;
+    }
+  
+    .course {
+      padding: 22px;
+    }
+  
+    .benefit-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* =========================
+     10. TELEFONLAR
+  ========================= */
+  
+  @media (max-width: 600px) {
+    header {
+      position: static;
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+  
+    .hero {
+      padding: 65px 6%;
+    }
+  
+    .hero h1 {
+      font-size: 32px;
+      letter-spacing: 0;
+    }
+  
+    .hero-text {
+      font-size: 15px;
+    }
+  
+    .courses,
+    .benefits,
+    .contact {
+      padding: 50px 6%;
+    }
+  
+    .courses h2,
+    .benefits h2,
+    .contact h2 {
+      font-size: 28px;
+    }
+  
+    .course-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .course {
+      padding: 24px;
+    }
+  
+    .section-description {
+      font-size: 14px;
+    }
+  }
+  
